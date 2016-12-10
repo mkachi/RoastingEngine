@@ -1,5 +1,4 @@
 # Compiled Object files
-*.slo
 *.lo
 *.o
 *.obj
@@ -11,7 +10,6 @@
 # Compiled Dynamic libraries
 *.so
 *.dylib
-*.dll
 
 # Fortran module files
 *.mod
@@ -21,9 +19,7 @@
 *.lai
 *.la
 *.a
-*.lib
 
 # Executables
-*.exe
 *.out
 *.app
