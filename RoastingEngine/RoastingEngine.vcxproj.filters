@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Roasting">
+      <UniqueIdentifier>{0ef4eddd-3782-4d16-9199-7d72180abe1a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Sample">
+      <UniqueIdentifier>{600241a2-7349-4f78-94f2-c5c025529628}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Roasting\Decoder">
+      <UniqueIdentifier>{068078d2-664e-49ed-a977-b5ffd8547693}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sample.cpp">
+      <Filter>Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\AudioClip.cpp">
+      <Filter>Roasting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\AudioListener.cpp">
+      <Filter>Roasting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\AudioSource.cpp">
+      <Filter>Roasting</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\WavDecoder.cpp">
+      <Filter>Roasting\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\Mp3Decoder.cpp">
+      <Filter>Roasting\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\OggDecoder.cpp">
+      <Filter>Roasting\Decoder</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\AudioDecoder.cpp">
+      <Filter>Roasting\Decoder</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Roasting\AudioClip.h">
+      <Filter>Roasting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\AudioListener.h">
+      <Filter>Roasting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\AudioPosition.h">
+      <Filter>Roasting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\AudioSource.h">
+      <Filter>Roasting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\OpenAL.h">
+      <Filter>Roasting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\Mp3Decoder.h">
+      <Filter>Roasting\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\OggDecoder.h">
+      <Filter>Roasting\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\WavDecoder.h">
+      <Filter>Roasting\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\IDecoder.h">
+      <Filter>Roasting\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\AudioDecoder.h">
+      <Filter>Roasting\Decoder</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\Roasting.h">
+      <Filter>Roasting</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
