@@ -4,7 +4,7 @@
 
 namespace Roasting
 {
-    class OggDecoder
+    class OggDecoder final
         : public IDecoder
     {
     private:

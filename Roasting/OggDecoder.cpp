@@ -18,7 +18,7 @@ bool OggDecoder::decode(const std::string& filename)
     FILE*           fp = nullptr;
     OggVorbis_File  vf;
 
-    int freq;
+    int     freq;
 
     int     endian = 0;
     int     bitStream;

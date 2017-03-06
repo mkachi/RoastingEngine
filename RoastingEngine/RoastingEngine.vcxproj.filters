@@ -10,13 +10,13 @@
     <Filter Include="Roasting\Decoder">
       <UniqueIdentifier>{068078d2-664e-49ed-a977-b5ffd8547693}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Roasting\Streaming">
+      <UniqueIdentifier>{90910b05-007a-4b82-b1ee-3c59182ad403}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="sample.cpp">
       <Filter>Sample</Filter>
-    </ClCompile>
-    <ClCompile Include="..\Roasting\AudioClip.cpp">
-      <Filter>Roasting</Filter>
     </ClCompile>
     <ClCompile Include="..\Roasting\AudioListener.cpp">
       <Filter>Roasting</Filter>
@@ -36,11 +36,20 @@
     <ClCompile Include="..\Roasting\AudioDecoder.cpp">
       <Filter>Roasting\Decoder</Filter>
     </ClCompile>
+    <ClCompile Include="..\Roasting\OggStream.cpp">
+      <Filter>Roasting\Streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\IStream.cpp">
+      <Filter>Roasting\Streaming</Filter>
+    </ClCompile>
+    <ClCompile Include="Test.cpp">
+      <Filter>Sample</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Roasting\AudioClip.cpp">
+      <Filter>Roasting</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\Roasting\AudioClip.h">
-      <Filter>Roasting</Filter>
-    </ClInclude>
     <ClInclude Include="..\Roasting\AudioListener.h">
       <Filter>Roasting</Filter>
     </ClInclude>
@@ -69,6 +78,15 @@
       <Filter>Roasting\Decoder</Filter>
     </ClInclude>
     <ClInclude Include="..\Roasting\Roasting.h">
+      <Filter>Roasting</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\OggStream.h">
+      <Filter>Roasting\Streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\IStream.h">
+      <Filter>Roasting\Streaming</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Roasting\AudioClip.h">
       <Filter>Roasting</Filter>
     </ClInclude>
   </ItemGroup>

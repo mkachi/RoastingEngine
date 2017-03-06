@@ -9,3 +9,5 @@
 #include <ogg/ogg.h>
 #include <vorbis/vorbisfile.h>
 #include <mpg123.h>
+#include <FLAC/stream_decoder.h>
+#include <FLAC++/decoder.h>

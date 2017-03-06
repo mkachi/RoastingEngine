@@ -5,6 +5,7 @@
 
 namespace Roasting
 {
+    enum class AudioType { Stream, Static };
     enum class AudioState
     {
         Playing,
@@ -17,6 +18,7 @@ namespace Roasting
     {
     private:
         AudioClip*      _clip;
+        AudioType       _type;
         ALuint          _source;
         float           _volume;
         float           _pitch;
@@ -32,8 +34,8 @@ namespace Roasting
         AudioSource();
         ~AudioSource();
 
-        AudioSource* init(const std::string& filename, bool loop = false);
-        AudioSource* init(const AudioClip* clip, bool loop = false);
+        bool init(const std::string& filename, bool loop = false, AudioType type = AudioType::Static);
+        bool init(const AudioClip* clip, bool loop = false, AudioType type = AudioType::Static);
 
         void play();
         void pause();
@@ -58,7 +60,7 @@ namespace Roasting
         void setMaxDistance(const float maxDistance);
         float getMaxDistance() const { return _maxDistance; }
 
-        void setPosition(const AudioPosition position);
+        void setPosition(const AudioPosition& position);
         AudioPosition& getPosition() { return _position; }
 
         void set2D(const bool audio2D);

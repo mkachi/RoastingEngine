@@ -4,7 +4,7 @@
 
 namespace Roasting
 {
-    class Mp3Decoder
+    class Mp3Decoder final
         : public IDecoder
     {
     private:

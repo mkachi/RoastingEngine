@@ -28,10 +28,15 @@ AudioSource::~AudioSource()
     }
 }
 
-AudioSource* AudioSource::init(const std::string& filename, bool loop)
+bool AudioSource::init(const std::string& filename, bool loop, AudioType type)
 {
     _clip = AudioClip::create(filename);
     alGenSources(1, &_source);
+    if (_source == 0)
+    {
+        return false;
+    }
+
     alSourcei(_source, AL_BUFFER, _clip->getBuffer());
     _length = _clip->getLength();
 
@@ -52,13 +57,18 @@ AudioSource* AudioSource::init(const std::string& filename, bool loop)
         alSourcefv(_source, AL_POSITION, _position.toArray);
     }
 
-    return this;
+    return true;
 }
 
-AudioSource* AudioSource::init(const AudioClip* clip, bool loop)
+bool AudioSource::init(const AudioClip* clip, bool loop, AudioType type)
 {
     _clip = _clip;
     alGenSources(1, &_source);
+    if (_source == 0)
+    {
+        return false;
+    }
+
     alSourcei(_source, AL_BUFFER, _clip->getBuffer());
     _length = _clip->getLength();
 
@@ -75,7 +85,7 @@ AudioSource* AudioSource::init(const AudioClip* clip, bool loop)
     }
     alSourcefv(_source, AL_VELOCITY, _position.toArray);
 
-    return this;
+    return true;
 }
 
 void AudioSource::play()
@@ -158,7 +168,7 @@ void AudioSource::setMaxDistance(const float maxDistance)
     alSourcef(_source, AL_MAX_DISTANCE, _maxDistance);
 }
 
-void AudioSource::setPosition(const AudioPosition position)
+void AudioSource::setPosition(const AudioPosition& position)
 {
     if (_2d)
     {

@@ -4,7 +4,7 @@
 
 namespace Roasting
 {
-    class WavDecoder
+    class WavDecoder final
         : public IDecoder
     {
     private:

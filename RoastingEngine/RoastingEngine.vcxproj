@@ -71,29 +71,29 @@
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)extension\openal\include;$(SolutionDir)extension\libvorbis\include;$(SolutionDir)extension\libmpg123\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)extension\libvorbis\lib\x86;$(SolutionDir)extension\libmpg123\lib\x86;$(SolutionDir)extension\openal\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)extension\openal\include;$(SolutionDir)extension\libvorbis\include;$(SolutionDir)extension\libmpg123\include;$(SolutionDir)extension\libflac\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)extension\libvorbis\lib\x86;$(SolutionDir)extension\libmpg123\lib\x86;$(SolutionDir)extension\openal\lib\x86;$(SolutionDir)extension\libflac\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>$(SolutionDir)extension\openal\include;$(SolutionDir)extension\libvorbis\include;$(SolutionDir)extension\libmpg123\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)extension\libvorbis\lib\x64;$(SolutionDir)extension\libmpg123\lib\x64;$(SolutionDir)extension\openal\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)extension\openal\include;$(SolutionDir)extension\libvorbis\include;$(SolutionDir)extension\libmpg123\include;$(SolutionDir)extension\libflac\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)extension\libvorbis\lib\x64;$(SolutionDir)extension\libmpg123\lib\x64;$(SolutionDir)extension\openal\lib\x64;$(SolutionDir)extension\libflac\lib\x64;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)extension\openal\include;$(SolutionDir)extension\libvorbis\include;$(SolutionDir)extension\libmpg123\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)extension\libvorbis\lib\x86;$(SolutionDir)extension\libmpg123\lib\x86;$(SolutionDir)extension\openal\lib\x86;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)extension\openal\include;$(SolutionDir)extension\libvorbis\include;$(SolutionDir)extension\libmpg123\include;$(SolutionDir)extension\libflac\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)extension\libvorbis\lib\x86;$(SolutionDir)extension\libmpg123\lib\x86;$(SolutionDir)extension\openal\lib\x86;$(SolutionDir)extension\libflac\lib\x86;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <LinkIncremental>false</LinkIncremental>
-    <IncludePath>$(SolutionDir)extension\openal\include;$(SolutionDir)extension\libvorbis\include;$(SolutionDir)extension\libmpg123\include;$(IncludePath)</IncludePath>
-    <LibraryPath>$(SolutionDir)extension\libvorbis\lib\x64;$(SolutionDir)extension\libmpg123\lib\x64;$(SolutionDir)extension\openal\lib\x64;$(LibraryPath)</LibraryPath>
+    <IncludePath>$(SolutionDir)extension\openal\include;$(SolutionDir)extension\libvorbis\include;$(SolutionDir)extension\libmpg123\include;$(SolutionDir)extension\libflac\include;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)extension\libvorbis\lib\x64;$(SolutionDir)extension\libmpg123\lib\x64;$(SolutionDir)extension\openal\lib\x64;$(SolutionDir)extension\libflac\lib\x64;$(LibraryPath)</LibraryPath>
     <OutDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\</OutDir>
     <IntDir>$(SolutionDir)\build\$(Platform)\$(Configuration)\$(ProjectName)\</IntDir>
   </PropertyGroup>
@@ -109,7 +109,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenAL32.lib;EFX-Util.lib;libmpg123.lib;libogg_static_d.lib;libvorbis_static_d.lib;libvorbisfile_static_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenAL32.lib;EFX-Util.lib;libmpg123.lib;libogg_static_d.lib;libvorbis_static_d.lib;libvorbisfile_static_d.lib;%(AdditionalDependencies);libFLAC_static.lib;libFLAC++_static.lib;win_utf8_io_static.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
@@ -124,7 +124,7 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenAL32.lib;EFX-Util.lib;libmpg123.lib;libogg_static_d.lib;libvorbis_static_d.lib;libvorbisfile_static_d.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenAL32.lib;EFX-Util.lib;libmpg123.lib;libogg_static_d.lib;libvorbis_static_d.lib;libvorbisfile_static_d.lib;%(AdditionalDependencies);libFLAC_static.lib;libFLAC++_static.lib;win_utf8_io_static.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -143,7 +143,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenAL32.lib;EFX-Util.lib;libmpg123.lib;libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenAL32.lib;EFX-Util.lib;libmpg123.lib;libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;%(AdditionalDependencies);libFLAC_static.lib;libFLAC++_static.lib;win_utf8_io_static.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -162,7 +162,7 @@
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>OpenAL32.lib;EFX-Util.lib;libmpg123.lib;libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>OpenAL32.lib;EFX-Util.lib;libmpg123.lib;libogg_static.lib;libvorbis_static.lib;libvorbisfile_static.lib;%(AdditionalDependencies);libFLAC_static.lib;libFLAC++_static.lib;win_utf8_io_static.lib</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -170,10 +170,15 @@
     <ClCompile Include="..\Roasting\AudioDecoder.cpp" />
     <ClCompile Include="..\Roasting\AudioListener.cpp" />
     <ClCompile Include="..\Roasting\AudioSource.cpp" />
+    <ClCompile Include="..\Roasting\IStream.cpp" />
     <ClCompile Include="..\Roasting\Mp3Decoder.cpp" />
     <ClCompile Include="..\Roasting\OggDecoder.cpp" />
+    <ClCompile Include="..\Roasting\OggStream.cpp" />
     <ClCompile Include="..\Roasting\WavDecoder.cpp" />
-    <ClCompile Include="sample.cpp" />
+    <ClCompile Include="sample.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="Test.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\Roasting\AudioClip.h" />
@@ -181,9 +186,11 @@
     <ClInclude Include="..\Roasting\AudioListener.h" />
     <ClInclude Include="..\Roasting\AudioPosition.h" />
     <ClInclude Include="..\Roasting\AudioSource.h" />
+    <ClInclude Include="..\Roasting\IStream.h" />
     <ClInclude Include="..\Roasting\IDecoder.h" />
     <ClInclude Include="..\Roasting\Mp3Decoder.h" />
     <ClInclude Include="..\Roasting\OggDecoder.h" />
+    <ClInclude Include="..\Roasting\OggStream.h" />
     <ClInclude Include="..\Roasting\OpenAL.h" />
     <ClInclude Include="..\Roasting\Roasting.h" />
     <ClInclude Include="..\Roasting\WavDecoder.h" />
